@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Haukai Restaurant</title>
+</head>
+<body>
+        <header>
+            <div class="header">
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="hours.html">Hours</a>
+                    </li>
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a href="reservations.html" class="active">Reservations</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+
+    <section id="reservations">
+        <div class="reservation-details">
+            <h2>How to Make a Reservation</h2>
+            <p>Fill out the form below to secure your table. Please make reservations at least 24 hours in advance. We look forward to serving you!</p>
+        </div>
+    
+        <div class="reservation-form">
+            <h2>Make a Reservation</h2>
+            <form action="reservation-handler.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+    
+                <label for="party-size">Party Size:</label>
+                <input type="number" id="party-size" name="party-size" min="1" required>
+    
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>"The atmosphere is amazing, and the food is simply divine! Can't wait to visit again."</p>
+                <p class="customer-name">- Emily, Verified Diner</p>
+            </div>
+            
+            <div class="review">
+                <p>"Fantastic experience! The staff was friendly, and the dishes were a culinary delight."</p>
+                <p class="customer-name">- James, Food Enthusiast</p>
+            </div>
+    
+            <!-- Add more reviews as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Haukai Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>

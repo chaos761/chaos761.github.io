@@ -1,0 +1,1026 @@
+/* Font families */
+@font-face {
+  font-family: 'Roboto';
+  src: url(fonts/Roboto-Black.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cool';
+  src: url(fonts/coolvetica-rg.otf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vogue';
+  src: url(fonts/Vogue.ttf) format('truetype');
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cool', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Cool', sans-serif;
+  padding-bottom: 60px;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  margin-bottom: 40px;
+  background-color: #333; /* Updated background color for contrast */
+}
+
+/* Navigation styling */
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: #fff; /* Updated text color */
+  padding: 5px 10px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  border-bottom-color: dodgerblue;
+  color: dodgerblue; /* Updated text color on hover/active */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #fff; /* Updated hamburger color */
+  background: var(--hamburger-color, #fff); /* Fallback color */
+}
+
+/* Media queries */
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    background: #333; /* Updated background color for mobile navigation */
+    padding: 30px;
+    transition: 0.3s;
+  }
+
+  header #nav_check:checked ~ nav {
+    left: 0;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav ul li a {
+    margin: 5px 0;
+    color: #fff; /* Updated text color for mobile navigation */
+  }
+}
+
+/* Title text */
+.titletext,
+.titletext2 {
+  font-family: 'Vogue';
+  font-size: 30px;
+  padding-top: 30px;
+  text-align: left;
+  margin-left: 100px; /* Adjust the margin for the desired shift */
+}
+
+.container {
+  margin: 20px auto 100px; /* Add 60px bottom margin to prevent overlap */
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.container .mainimg {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px; /* Adjust the margin for the desired gap */
+  width: 50%;
+  height: auto;
+  max-width: 561px;
+  max-height: 374px;
+}
+
+.container .textmain {
+  font-family: 'Cool', sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  width: 50%; /* Adjust the width */
+  box-sizing: border-box; /* Add box-sizing */
+}
+
+/* Section Styling */
+.section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section h2 {
+  color: #333;
+}
+
+.section p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Contact Page Styles */
+#contact,
+#about-owners {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info,
+.contact-form,
+#about-owners,
+#map {
+  flex: 1;
+  margin-bottom: 40px; /* Adjust as needed */
+}
+
+.contact-info h2,
+.contact-form h2,
+#about-owners h2,
+#map h2 {
+  font-family: 'Vogue', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p,
+#about-owners p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Shared Contact Form and "Meet the Visionaries" Styles */
+.contact-form,
+#about-owners {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Map Styles */
+#map iframe {
+  width: 100%;
+  height: 450px; /* Adjust as needed */
+  border: none;
+  border-radius: 8px;
+}
+
+/* Reservation Section */
+#reservations {
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center the content */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px; /* Increased space between reservations and form */
+}
+
+.reservation-details,
+.reservation-form {
+  width: 100%; /* Take up full width */
+  max-width: 600px; /* Set a maximum width if desired */
+  text-align: center; /* Center the content within each section */
+}
+
+.reservation-details h2,
+.reservation-form h2 {
+  font-family: 'Vogue', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reservation-details p {
+  font-size: 16px;
+  margin-bottom: 30px; /* Increased space below text */
+  color: #555;
+}
+
+/* Reservation Form Styles */
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* Added margin at the top of the form */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#reviews {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.customer-reviews {
+  text-align: center;
+}
+
+.customer-reviews h2 {
+  font-family: 'Vogue', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.review {
+  margin-bottom: 30px;
+}
+
+.review p {
+  font-size: 16px;
+  color: #555;
+}
+
+.customer-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Left Section */
+#left-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items h3 {
+  color: #333;
+}
+
+.menu-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items li {
+  margin-bottom: 15px;
+}
+
+.menu-items strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.menu-items p {
+  margin: 8px 0 0;
+  color: #555;
+}
+
+/* Right Section for Beverages */
+#beverages {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#beverages h2 {
+  color: #333;
+}
+
+.beverage-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.beverage-categories h3 {
+  color: #333;
+}
+
+.beverage-categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.beverage-categories li {
+  margin-bottom: 15px;
+}
+
+.beverage-categories strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.beverage-categories p {
+  margin: 8px 0 0;
+  color: #555;
+}
+
+/* gallery styling */
+#gallery {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#gallery h2 {
+  color: #333;
+  text-align: center;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.image-gallery img {
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Hours Page Styles */
+.hours {
+  max-width: 800px;
+  margin: 40px auto; /* Increased margin for more space */
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.hours h2 {
+  font-family: 'Vogue', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hours p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Increased margin for more space */
+}
+
+* Calendar styles */
+.calendar {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar h1,
+.calendar h2 {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.calendar h2 {
+  color: #777777;
+}
+
+.calendar .months,
+.calendar .weekday,
+.calendar .days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar .months li,
+.calendar .weekday li,
+.calendar .days li {
+  float: left;
+  text-align: center;
+  width: 14.2857%; /* Equal width for each day */
+  box-sizing: border-box;
+}
+
+.calendar .months li,
+.calendar .weekday li {
+  font-size: 12px;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.calendar .days li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.calendar .days li a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  color: #333333;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.calendar .days li a:hover {
+  background-color: #ddd;
+}
+
+.calendar .days li .selected {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.calendar .days li .event {
+  color: #e74c3c;
+}
+
+/* Special Events Section */
+.special-events {
+  max-width: 800px;
+  margin: 40px auto; /* Increased margin for more space */
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.special-events h2 {
+  font-family: 'Vogue', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.special-events p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Increased margin for more space */
+}
+
+.calendar {
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto 0; /* Center the calendar horizontally and remove margin at the top */
+  border-collapse: collapse;
+}
+
+.calendar-table {
+  margin: 0 auto; /* Center the table */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increase padding for better spacing */
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.event {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav {
+    padding: 15px;
+    width: 100%; /* Ensure full width */
+  }
+
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .mainimg {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .container .textmain {
+    width: 100%;
+  }
+
+  .titletext,
+  .titletext2 {
+    margin-left: 20px;
+  }
+
+  #reservations,
+  #menu,
+  #hours-gallery,
+  #contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #left-section,
+  #beverages {
+    padding: 15px;
+  }
+
+  .menu-items li,
+  .beverage-categories li {
+    margin-bottom: 10px;
+  }
+
+  .hours,
+  .special-events,
+  #contact {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .hours h2,
+  .special-events h2,
+  #contact h2 {
+    font-size: 24px;
+  }
+
+  .hours p,
+  .special-events p,
+  #contact p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 40px auto 100px;
+  }
+
+  .container .mainimg {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .container .textmain {
+    width: 50%;
+  }
+
+  .titletext,
+  .titletext2 {
+    margin-left: 100px;
+  }
+
+  #reservations,
+  #menu,
+  #hours-gallery,
+  #contact {
+    justify-content: space-around;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    width: auto;
+    margin: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #left-section,
+  #beverages {
+    padding: 20px;
+  }
+
+  .menu-items li,
+  .beverage-categories li {
+    margin-bottom: 15px;
+  }
+
+  .hours,
+  .special-events,
+  #contact {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .hours h2,
+  .special-events h2,
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  .hours p,
+  .special-events p,
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 768px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 40px auto 100px;
+  }
+
+  .container .mainimg {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .container .textmain {
+    width: 50%;
+  }
+
+  .titletext,
+  .titletext2 {
+    margin-left: 100px;
+  }
+
+  #reservations,
+  #menu,
+  #hours-gallery,
+  #contact {
+    justify-content: space-around;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    width: auto;
+    margin: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #left-section,
+  #beverages {
+    padding: 20px;
+  }
+
+  .menu-items li,
+  .beverage-categories li {
+    margin-bottom: 15px;
+  }
+
+  .hours,
+  .special-events,
+  #contact {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .hours h2,
+  .special-events h2,
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  .hours p,
+  .special-events p,
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 992px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 40px auto 100px;
+  }
+
+  .container .mainimg {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .container .textmain {
+    width: 50%;
+  }
+
+  .titletext,
+  .titletext2 {
+    margin-left: 100px;
+  }
+
+  #reservations,
+  #menu,
+  #hours-gallery,
+  #contact {
+    justify-content: space-around;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    width: auto;
+    margin: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #left-section,
+  #beverages {
+    padding: 20px;
+  }
+
+  .menu-items li,
+  .beverage-categories li {
+    margin-bottom: 15px;
+  }
+
+  .hours,
+  .special-events,
+  #contact {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .hours h2,
+  .special-events h2,
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  .hours p,
+  .special-events p,
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1200px) {
+  header {
+    padding: 0 100px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 40px auto 100px;
+  }
+
+  .container .mainimg {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .container .textmain {
+    width: 50%;
+  }
+
+  .titletext,
+  .titletext2 {
+    margin-left: 100px;
+  }
+
+  #reservations,
+  #menu,
+  #hours-gallery,
+  #contact {
+    justify-content: space-around;
+  }
+
+  label,
+  input,
+  textarea,
+  button {
+    width: auto;
+    margin: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #left-section,
+  #beverages {
+    padding: 20px;
+  }
+
+  .menu-items li,
+  .beverage-categories li {
+    margin-bottom: 15px;
+  }
+
+  .hours,
+  .special-events,
+  #contact {
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .hours h2,
+  .special-events h2,
+  #contact h2 {
+    font-size: 28px;
+  }
+
+  .hours p,
+  .special-events p,
+  #contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+

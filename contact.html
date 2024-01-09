@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Haukai Restaurant</title>
+</head>
+<body>
+        <header>
+            <div class="header">
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="active">Contact</a>
+                    </li>
+                    <li>
+                        <a href="hours.html">Hours</a>
+                    </li>
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+                    <li>
+                        <a href="reservations.html">Reservations</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </header>
+
+        <section id="map">
+            <h2>Find Us on the Map</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6518.190448829735!2d173.9402416935791!3d-35.22899949999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1703828971384!5m2!1sen!2snz"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+            ></iframe>
+        </section>
+
+<section id="contact">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Address:</strong> 1 Island Street, Kerikeri, Bay of Islands</p>
+        <p><strong>Phone:</strong> 09 401 4019</p>
+        <p><strong>Email:</strong> info@haukairestaurant.com</p>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="contact-handler.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<section id="about-owners">
+    <h2>Meet the Visionaries</h2>
+    <p>
+        Nestled in the vibrant Bay of Islands, New Zealand, Amara Kerehoma and Basil Kerehoma,
+        an adventurous and flavor-driven couple, embarked on a culinary odyssey that would captivate
+        the palates of both locals and travelers.
+        <br>
+        <br>
+        Their love story unfolded amidst the rhythmic waves, where Amara and Basil explored the
+        abundant marine life and forged a profound connection with the sea. Influenced by the rich
+        traditions of the Māori, the indigenous people of New Zealand, they aspired to create a dining
+        experience that embodied the essence of their shared passion.
+        <br>
+        <br>
+        Amara and Basil felt a calling to bring these flavors to life, paying homage to the Māori spirits
+        that guided their journey. With a sense of destiny, they opened the doors to "Haukai," their
+        seaside haven, where each dish was a masterpiece crafted with love. The menu, infused with
+        ingredients echoing the whispers of Māori traditions, became a testament to their divine connection
+        and the extraordinary journey that led them to share the enchantment of the Bay of Islands with the world.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Haukai Restaurant. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
